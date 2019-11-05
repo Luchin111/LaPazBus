@@ -1,7 +1,7 @@
-package modelos;
+package dto;
 
-import bdd.MovilidadEntity;
-import bdd.RutaEntity;
+import domain.MovilidadEntity;
+import domain.RutaEntity;
 
 public class MovilidadRutaModel {
     private int idMovilidadRuta;

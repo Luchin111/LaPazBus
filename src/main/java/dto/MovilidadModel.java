@@ -1,4 +1,4 @@
-package modelos;
+package dto;
 
 public class MovilidadModel {
     private int idMovilidad;

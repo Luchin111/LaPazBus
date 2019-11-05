@@ -89,20 +89,20 @@ public class MainBot extends TelegramLongPollingBot {
 
         }
 
-        if (command.equals("/2A")){
+        if (command.equals("/2")){
 
             resp = "Envia tu Ubacion actual : \n" +
-                    "/1 Aceptar \n" +
-                    "/2 Denegar \n";
+                    "/1b Aceptar \n" +
+                    "/2b Denegar \n";
 
         }
-        if (command.equals("/1")){
+        if (command.equals("/1b")){
 
             resp = "Lo sentimos aun no tenemos la opcion disponible";
 
         }
 
-        if(command.equals("/nada")){
+        if(command.equals("/2b")){
             resp = " Fue un gusto ayudarte.";
         }
 

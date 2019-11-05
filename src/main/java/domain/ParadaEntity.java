@@ -1,24 +1,21 @@
-package bdd;
+package domain;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
 @Table(name = "parada", schema = "dbtest_lpbus", catalog = "")
 public class ParadaEntity {
     private int idParada;
-    private Integer statuss;
+    private Integer status;
     private String textUser;
     private String textHost;
     private String nombreParada;
     private Double latitud;
     private Double longitud;
-    private Collection<RutaEntity> rutasByIdParada;
-    private Collection<RutaEntity> rutasByIdParada_0;
 
     @Id
-    @Column(name = "id_parada", nullable = false)
+    @Column(name = "id_parada")
     public int getIdParada() {
         return idParada;
     }
@@ -28,17 +25,17 @@ public class ParadaEntity {
     }
 
     @Basic
-    @Column(name = "statuss", nullable = true)
-    public Integer getStatuss() {
-        return statuss;
+    @Column(name = "status")
+    public Integer getStatus() {
+        return status;
     }
 
-    public void setStatuss(Integer statuss) {
-        this.statuss = statuss;
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     @Basic
-    @Column(name = "text_user", nullable = true, length = 200)
+    @Column(name = "text_user")
     public String getTextUser() {
         return textUser;
     }
@@ -48,7 +45,7 @@ public class ParadaEntity {
     }
 
     @Basic
-    @Column(name = "text_host", nullable = true, length = 200)
+    @Column(name = "text_host")
     public String getTextHost() {
         return textHost;
     }
@@ -58,7 +55,7 @@ public class ParadaEntity {
     }
 
     @Basic
-    @Column(name = "Nombre_Parada", nullable = true, length = 200)
+    @Column(name = "Nombre_Parada")
     public String getNombreParada() {
         return nombreParada;
     }
@@ -68,7 +65,7 @@ public class ParadaEntity {
     }
 
     @Basic
-    @Column(name = "latitud", nullable = true, precision = 0)
+    @Column(name = "latitud")
     public Double getLatitud() {
         return latitud;
     }
@@ -78,7 +75,7 @@ public class ParadaEntity {
     }
 
     @Basic
-    @Column(name = "longitud", nullable = true, precision = 0)
+    @Column(name = "longitud")
     public Double getLongitud() {
         return longitud;
     }
@@ -93,7 +90,7 @@ public class ParadaEntity {
         if (o == null || getClass() != o.getClass()) return false;
         ParadaEntity that = (ParadaEntity) o;
         return idParada == that.idParada &&
-                Objects.equals(statuss, that.statuss) &&
+                Objects.equals(status, that.status) &&
                 Objects.equals(textUser, that.textUser) &&
                 Objects.equals(textHost, that.textHost) &&
                 Objects.equals(nombreParada, that.nombreParada) &&
@@ -103,24 +100,6 @@ public class ParadaEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idParada, statuss, textUser, textHost, nombreParada, latitud, longitud);
-    }
-
-    @OneToMany(mappedBy = "paradaByIdOrigen")
-    public Collection<RutaEntity> getRutasByIdParada() {
-        return rutasByIdParada;
-    }
-
-    public void setRutasByIdParada(Collection<RutaEntity> rutasByIdParada) {
-        this.rutasByIdParada = rutasByIdParada;
-    }
-
-    @OneToMany(mappedBy = "paradaByIdDllegada")
-    public Collection<RutaEntity> getRutasByIdParada_0() {
-        return rutasByIdParada_0;
-    }
-
-    public void setRutasByIdParada_0(Collection<RutaEntity> rutasByIdParada_0) {
-        this.rutasByIdParada_0 = rutasByIdParada_0;
+        return Objects.hash(idParada, status, textUser, textHost, nombreParada, latitud, longitud);
     }
 }

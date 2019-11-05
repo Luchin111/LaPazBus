@@ -1,21 +1,19 @@
-package bdd;
+package domain;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
 @Table(name = "tipo_movilidad", schema = "dbtest_lpbus", catalog = "")
 public class TipoMovilidadEntity {
     private int idTipoMovilidad;
-    private Integer statuss;
+    private Integer status;
     private String textUser;
     private String textHost;
     private String descripcion;
-    private Collection<MovilidadEntity> movilidadsByIdTipoMovilidad;
 
     @Id
-    @Column(name = "id_tipo_movilidad", nullable = false)
+    @Column(name = "id_tipo_movilidad")
     public int getIdTipoMovilidad() {
         return idTipoMovilidad;
     }
@@ -25,17 +23,17 @@ public class TipoMovilidadEntity {
     }
 
     @Basic
-    @Column(name = "statuss", nullable = true)
-    public Integer getStatuss() {
-        return statuss;
+    @Column(name = "status")
+    public Integer getStatus() {
+        return status;
     }
 
-    public void setStatuss(Integer statuss) {
-        this.statuss = statuss;
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     @Basic
-    @Column(name = "text_user", nullable = true, length = 200)
+    @Column(name = "text_user")
     public String getTextUser() {
         return textUser;
     }
@@ -45,7 +43,7 @@ public class TipoMovilidadEntity {
     }
 
     @Basic
-    @Column(name = "text_host", nullable = true, length = 200)
+    @Column(name = "text_host")
     public String getTextHost() {
         return textHost;
     }
@@ -55,7 +53,7 @@ public class TipoMovilidadEntity {
     }
 
     @Basic
-    @Column(name = "descripcion", nullable = true, length = 200)
+    @Column(name = "descripcion")
     public String getDescripcion() {
         return descripcion;
     }
@@ -70,7 +68,7 @@ public class TipoMovilidadEntity {
         if (o == null || getClass() != o.getClass()) return false;
         TipoMovilidadEntity that = (TipoMovilidadEntity) o;
         return idTipoMovilidad == that.idTipoMovilidad &&
-                Objects.equals(statuss, that.statuss) &&
+                Objects.equals(status, that.status) &&
                 Objects.equals(textUser, that.textUser) &&
                 Objects.equals(textHost, that.textHost) &&
                 Objects.equals(descripcion, that.descripcion);
@@ -78,15 +76,6 @@ public class TipoMovilidadEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idTipoMovilidad, statuss, textUser, textHost, descripcion);
-    }
-
-    @OneToMany(mappedBy = "tipoMovilidadByIdTipoMovilidad")
-    public Collection<MovilidadEntity> getMovilidadsByIdTipoMovilidad() {
-        return movilidadsByIdTipoMovilidad;
-    }
-
-    public void setMovilidadsByIdTipoMovilidad(Collection<MovilidadEntity> movilidadsByIdTipoMovilidad) {
-        this.movilidadsByIdTipoMovilidad = movilidadsByIdTipoMovilidad;
+        return Objects.hash(idTipoMovilidad, status, textUser, textHost, descripcion);
     }
 }

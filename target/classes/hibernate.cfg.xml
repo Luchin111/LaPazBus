@@ -6,16 +6,6 @@
   <session-factory>
     <property name="connection.url">jdbc:mysql://localhost:3306/dbtest_lpbus</property>
     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-      <mapping class="api.MovilidadEntity"/>
-      <mapping class="api.MovilidadRutaEntity"/>
-      <mapping class="api.ParadaEntity"/>
-      <mapping class="api.RutaEntity"/>
-      <mapping class="api.TipoMovilidadEntity"/>
-      <mapping class="bdd.MovilidadEntity"/>
-      <mapping class="bdd.MovilidadRutaEntity"/>
-      <mapping class="bdd.ParadaEntity"/>
-      <mapping class="bdd.RutaEntity"/>
-      <mapping class="bdd.TipoMovilidadEntity"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
@@ -23,3 +13,5 @@
     <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
   </session-factory>
 </hibernate-configuration>
+
+

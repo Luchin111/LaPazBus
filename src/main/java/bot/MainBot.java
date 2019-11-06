@@ -55,9 +55,9 @@ public class MainBot extends TelegramLongPollingBot {
 
 
     private String Responder(String command, String chatName) {
-        String resp= "Hola "+chatName +" en que puedo ayudarte \n" +
-                "/1 Buscar la ruta de una linea especifica \n" +
-                "/2 Buscar minibuses a mi destino \n";
+        String resp= "Hola "+chatName +" en que puedo ayudarte? \n" +
+                "/ruta Buscar la ruta de una linea especifica \n" +
+                "/mdest Buscar minibuses a mi destino \n";
 
         if(command.equals("/1A")){
             resp = "Buscar la ruta de una linea especifica \n" +
@@ -89,11 +89,11 @@ public class MainBot extends TelegramLongPollingBot {
 
         }
 
-        if (command.equals("/2")){
+        if (command.equals("2")){
 
             resp = "Envia tu Ubacion actual : \n" +
-                    "/1b Aceptar \n" +
-                    "/2b Denegar \n";
+                    "1 Aceptar \n" +
+                    "2 Denegar \n";
 
         }
         if (command.equals("/1b")){

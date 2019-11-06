@@ -22,7 +22,7 @@ public class RutaEntity {
     }
 
     @Basic
-    @Column(name = "status")
+    @Column(name = "statuss")
     public Integer getStatus() {
         return status;
     }

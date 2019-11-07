@@ -1,7 +1,6 @@
 package domain;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
 @Table(name = "movilidad", schema = "dbtest_lpbus", catalog = "")
@@ -55,15 +54,23 @@ public class MovilidadEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         MovilidadEntity that = (MovilidadEntity) o;
-        return idMovilidad == that.idMovilidad &&
-                Objects.equals(status, that.status) &&
-                Objects.equals(textUser, that.textUser) &&
-                Objects.equals(textHost, that.textHost);
+
+        if (idMovilidad != that.idMovilidad) return false;
+        if (status != null ? !status.equals(that.status) : that.status != null) return false;
+        if (textUser != null ? !textUser.equals(that.textUser) : that.textUser != null) return false;
+        if (textHost != null ? !textHost.equals(that.textHost) : that.textHost != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idMovilidad, status, textUser, textHost);
+        int result = idMovilidad;
+        result = 31 * result + (status != null ? status.hashCode() : 0);
+        result = 31 * result + (textUser != null ? textUser.hashCode() : 0);
+        result = 31 * result + (textHost != null ? textHost.hashCode() : 0);
+        return result;
     }
 }

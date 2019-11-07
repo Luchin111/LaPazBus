@@ -1,7 +1,6 @@
 package domain;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
 @Table(name = "parada", schema = "dbtest_lpbus", catalog = "")
@@ -88,18 +87,29 @@ public class ParadaEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         ParadaEntity that = (ParadaEntity) o;
-        return idParada == that.idParada &&
-                Objects.equals(status, that.status) &&
-                Objects.equals(textUser, that.textUser) &&
-                Objects.equals(textHost, that.textHost) &&
-                Objects.equals(nombreParada, that.nombreParada) &&
-                Objects.equals(latitud, that.latitud) &&
-                Objects.equals(longitud, that.longitud);
+
+        if (idParada != that.idParada) return false;
+        if (status != null ? !status.equals(that.status) : that.status != null) return false;
+        if (textUser != null ? !textUser.equals(that.textUser) : that.textUser != null) return false;
+        if (textHost != null ? !textHost.equals(that.textHost) : that.textHost != null) return false;
+        if (nombreParada != null ? !nombreParada.equals(that.nombreParada) : that.nombreParada != null) return false;
+        if (latitud != null ? !latitud.equals(that.latitud) : that.latitud != null) return false;
+        if (longitud != null ? !longitud.equals(that.longitud) : that.longitud != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idParada, status, textUser, textHost, nombreParada, latitud, longitud);
+        int result = idParada;
+        result = 31 * result + (status != null ? status.hashCode() : 0);
+        result = 31 * result + (textUser != null ? textUser.hashCode() : 0);
+        result = 31 * result + (textHost != null ? textHost.hashCode() : 0);
+        result = 31 * result + (nombreParada != null ? nombreParada.hashCode() : 0);
+        result = 31 * result + (latitud != null ? latitud.hashCode() : 0);
+        result = 31 * result + (longitud != null ? longitud.hashCode() : 0);
+        return result;
     }
 }

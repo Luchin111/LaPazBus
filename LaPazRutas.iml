@@ -4,19 +4,17 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" value="07c1dc90-4b91-44d0-883c-ba1616a7ed6e" />
-          <unit-entry name="hibernate.cfg1.xml" value="f116692c-9378-4a0c-baf2-a2f07f006eb6" />
+          <unit-entry name="hibernate.cfg.xml" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg1.xml" />
       </configuration>
     </facet>
     <facet type="jpa" name="JPA">
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
-          <factory-entry name="com.example.LaPazRutas_LaPazRutas_jar_1.0-SNAPSHOTPU" value="d823078a-0aa3-45b7-af21-7c6a996ea931" />
+          <factory-entry name="Entities" value="d823078a-0aa3-45b7-af21-7c6a996ea931" />
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />

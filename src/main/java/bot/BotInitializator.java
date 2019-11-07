@@ -1,5 +1,7 @@
 package bot;
 
+import bl.CustomerBl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.TelegramBotsApi;
@@ -9,28 +11,23 @@ import javax.annotation.PostConstruct;
 
 @Component
 public class BotInitializator {
+    CustomerBl customerBl;
 
+    @Autowired
+    public BotInitializator(CustomerBl customerBl) {
+        this.customerBl = customerBl;
+    }
+
+    public BotInitializator() {
+    }
     @PostConstruct
     public void init(){
-        /*
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-         */
+
+
         ApiContextInitializer.init();
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
         try {
-            telegramBotsApi.registerBot(new MainBot());
+            telegramBotsApi.registerBot(new BotBDD(customerBl));
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }

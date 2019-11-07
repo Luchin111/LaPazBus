@@ -17,9 +17,7 @@ public class MainClass {
     public static void main(String[] args) {
           SpringApplication.run(MainClass.class, args);
     }
-
-}
-*/
+    */
     static CustomerBl customerBl;
     public static void main(String[] args) {
 
@@ -33,5 +31,19 @@ public class MainClass {
         }
     }
 }
+/*
+    static CustomerBl customerBl;
+    public static void main(String[] args) {
 
+        ApiContextInitializer.init();
+        TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
+        try {
+            telegramBotsApi.registerBot(new BotBDD(customerBl));
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+
+        }
+    }
+}
+*/
 

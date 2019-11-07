@@ -1,46 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="MariaDB - dbtest_lpbus@localhost" uuid="d823078a-0aa3-45b7-af21-7c6a996ea931">
-      <driver-ref>mariadb</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mariadb://localhost:3306/dbtest_lpbus</jdbc-url>
-    </data-source>
-<<<<<<< HEAD
-    <data-source source="LOCAL" name="hibernate.cfg1.xml/Hibernate" uuid="158c0a7f-5b56-4a4a-bf9a-0aa320d4cf47">
-=======
-    <data-source source="LOCAL" name="hibernate.cfg1.xml/Hibernate" uuid="c748d947-485d-47e6-be37-d07b7cdc3b90">
->>>>>>> 17622cc9fa164057841729ffad29850c2fa46c9f
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="3440e4db-ec76-4ba7-a674-c7d36365d2a0">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>Hibernate
 
-<<<<<<< HEAD
-D:/Universidad/Ingenieria del software/Proyecto/LaPazRutas/src/main/resources/hibernate.cfg1.xml</remarks>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/dbtest_lpbus</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="1436e20c-465c-4355-a104-7015a15b05b8">
-=======
-C:/Users/Fernanda/Desktop/SEMESTRE/SoftwareProyecto/LaPazBus/src/main/resources/hibernate.cfg1.xml</remarks>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/dbtest_lpbus</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="4bb4c6af-b5ea-4613-b4f3-619d5e39f546">
->>>>>>> 17622cc9fa164057841729ffad29850c2fa46c9f
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>Hibernate
-
-<<<<<<< HEAD
-D:/Universidad/Ingenieria del software/Proyecto/LaPazRutas/src/main/resources/hibernate.cfg.xml</remarks>
-=======
 C:/Users/Fernanda/Desktop/SEMESTRE/SoftwareProyecto/LaPazBus/src/main/resources/hibernate.cfg.xml</remarks>
->>>>>>> 17622cc9fa164057841729ffad29850c2fa46c9f
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/dbtest_lpbus</jdbc-url>
     </data-source>
   </component>

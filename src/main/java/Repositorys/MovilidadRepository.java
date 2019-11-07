@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface MovilidadRepository extends JpaRepository<MovilidadModel, Integer> {
+public interface MovilidadRepository extends JpaRepository<MovilidadEntity, Integer> {
 
     List<MovilidadEntity> findAllByStatus(int status);
 }

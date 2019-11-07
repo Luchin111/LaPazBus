@@ -34,11 +34,11 @@ public class BotBDD extends TelegramLongPollingBot {
 
 
         {
-            MovilidadModel movilidadModel = customerBl.findMovilidadById(1);
+            MovilidadEntity movilidadEntity = customerBl.findMovilidadById(1);
             // customerBl.
             SendMessage message = new SendMessage() // Create a SendMessage object with mandatory fields
                     .setChatId(update.getMessage().getChatId())
-                    .setText("Persona desde BBDD: " + movilidadModel);
+                    .setText("Persona desde BBDD: " + movilidadEntity);
 
         }
         message.setText(respuesta);

@@ -20,8 +20,8 @@ public class CustomerBl {
         this.movilidadRepository = movilidadRepository;
     }
 
-    public MovilidadModel findMovilidadById(Integer pk) {
-        Optional<MovilidadModel> optional = this.movilidadRepository.findById(pk);
+    public MovilidadEntity findMovilidadById(Integer pk) {
+        Optional<MovilidadEntity> optional = this.movilidadRepository.findById(pk);
         if (optional.isPresent()) {
             return optional.get();
         } else {

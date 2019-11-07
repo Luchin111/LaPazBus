@@ -7,5 +7,25 @@
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mariadb://localhost:3306/dbtest_lpbus</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg1.xml/Hibernate" uuid="c748d947-485d-47e6-be37-d07b7cdc3b90">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/Fernanda/Desktop/SEMESTRE/SoftwareProyecto/LaPazBus/src/main/resources/hibernate.cfg1.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/dbtest_lpbus</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="4bb4c6af-b5ea-4613-b4f3-619d5e39f546">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/Fernanda/Desktop/SEMESTRE/SoftwareProyecto/LaPazBus/src/main/resources/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/dbtest_lpbus</jdbc-url>
+    </data-source>
   </component>
 </project>

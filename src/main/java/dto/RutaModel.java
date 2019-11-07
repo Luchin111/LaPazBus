@@ -2,15 +2,15 @@ package dto;
 
 public class RutaModel {
     private int idRuta;
-    private Integer statuss;
+    private Integer status;
     private String textUser;
     private String textHost;
     private int idOrigen;
     private int idDllegada;
 
-    public RutaModel(int idRuta, Integer statuss, int idOrigen, int idDllegada) {
+    public RutaModel(int idRuta, Integer status, int idOrigen, int idDllegada) {
         this.idRuta = idRuta;
-        this.statuss = statuss;
+        this.status = status;
         this.idOrigen = idOrigen;
         this.idDllegada = idDllegada;
     }
@@ -23,12 +23,12 @@ public class RutaModel {
         this.idRuta = idRuta;
     }
 
-    public Integer getStatuss() {
-        return statuss;
+    public Integer getstatus() {
+        return status;
     }
 
-    public void setStatuss(Integer statuss) {
-        this.statuss = statuss;
+    public void setstatus(Integer status) {
+        this.status = status;
     }
 
     public String getTextUser() {

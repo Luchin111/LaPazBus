@@ -1,6 +1,6 @@
 package bot;
 
-import bl.CustomerBl;
+import bl.MovilidadBl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +16,10 @@ public class BotInitializator {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BotInitializator.class);
 
-    CustomerBl customerBl;
+    MovilidadBl movilidadBl;
     @Autowired
-    public BotInitializator(CustomerBl customerBl) {
-        this.customerBl = customerBl;
+    public BotInitializator(MovilidadBl movilidadBl) {
+        this.movilidadBl = movilidadBl;
     }
 
     public BotInitializator() {
@@ -38,7 +38,7 @@ public class BotInitializator {
         ApiContextInitializer.init();
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
         try {
-            telegramBotsApi.registerBot(new BotBDD(customerBl));
+            telegramBotsApi.registerBot(new BotBDD(movilidadBl));
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }

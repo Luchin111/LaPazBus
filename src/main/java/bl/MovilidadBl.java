@@ -12,11 +12,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CustomerBl {
+public class MovilidadBl {
     MovilidadRepository movilidadRepository;
 
     @Autowired
-    public CustomerBl(MovilidadRepository movilidadRepository) {
+    public MovilidadBl(MovilidadRepository movilidadRepository) {
         this.movilidadRepository = movilidadRepository;
     }
 

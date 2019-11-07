@@ -1,15 +1,11 @@
 package bot;
 
-import bl.BotBl;
-import bl.CustomerBl;
+import bl.MovilidadBl;
 import domain.MovilidadEntity;
-import dto.MovilidadModel;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
-
-import java.util.List;
 
 public class BotBDD extends TelegramLongPollingBot {
 
@@ -17,10 +13,10 @@ public class BotBDD extends TelegramLongPollingBot {
     long chatId;
     SendMessage message;
 
-    CustomerBl customerBl;
+    MovilidadBl movilidadBl;
 
-    public BotBDD(CustomerBl customerBl) {
-        this.customerBl = customerBl;
+    public BotBDD(MovilidadBl movilidadBl) {
+        this.movilidadBl = movilidadBl;
     }
 
     @Override
@@ -34,7 +30,7 @@ public class BotBDD extends TelegramLongPollingBot {
 
 
         {
-            MovilidadEntity movilidadEntity = customerBl.findMovilidadById(1);
+            MovilidadEntity movilidadEntity = movilidadBl.findMovilidadById(1);
             // customerBl.
             SendMessage message = new SendMessage() // Create a SendMessage object with mandatory fields
                     .setChatId(update.getMessage().getChatId())

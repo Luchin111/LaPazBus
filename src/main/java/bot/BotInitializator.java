@@ -42,7 +42,7 @@ public class BotInitializator {
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
-
+ /**/
 
     }
 

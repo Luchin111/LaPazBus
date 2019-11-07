@@ -14,7 +14,7 @@ public class ParadaEntity {
     private Double longitud;
 
     @Id
-    @Column(name = "id_parada")
+    @Column(name = "id_parada", nullable = false)
     public int getIdParada() {
         return idParada;
     }
@@ -24,7 +24,7 @@ public class ParadaEntity {
     }
 
     @Basic
-    @Column(name = "status")
+    @Column(name = "status", nullable = true)
     public Integer getStatus() {
         return status;
     }
@@ -34,7 +34,7 @@ public class ParadaEntity {
     }
 
     @Basic
-    @Column(name = "text_user")
+    @Column(name = "text_user", nullable = true, length = 200)
     public String getTextUser() {
         return textUser;
     }
@@ -44,7 +44,7 @@ public class ParadaEntity {
     }
 
     @Basic
-    @Column(name = "text_host")
+    @Column(name = "text_host", nullable = true, length = 200)
     public String getTextHost() {
         return textHost;
     }
@@ -54,7 +54,7 @@ public class ParadaEntity {
     }
 
     @Basic
-    @Column(name = "Nombre_Parada")
+    @Column(name = "Nombre_Parada", nullable = true, length = 200)
     public String getNombreParada() {
         return nombreParada;
     }
@@ -64,7 +64,7 @@ public class ParadaEntity {
     }
 
     @Basic
-    @Column(name = "latitud")
+    @Column(name = "latitud", nullable = true, precision = 0)
     public Double getLatitud() {
         return latitud;
     }
@@ -74,7 +74,7 @@ public class ParadaEntity {
     }
 
     @Basic
-    @Column(name = "longitud")
+    @Column(name = "longitud", nullable = true, precision = 0)
     public Double getLongitud() {
         return longitud;
     }

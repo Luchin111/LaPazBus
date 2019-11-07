@@ -12,7 +12,7 @@ public class TipoMovilidadEntity {
     private String descripcion;
 
     @Id
-    @Column(name = "id_tipo_movilidad")
+    @Column(name = "id_tipo_movilidad", nullable = false)
     public int getIdTipoMovilidad() {
         return idTipoMovilidad;
     }
@@ -22,7 +22,7 @@ public class TipoMovilidadEntity {
     }
 
     @Basic
-    @Column(name = "status")
+    @Column(name = "status", nullable = true)
     public Integer getStatus() {
         return status;
     }
@@ -32,7 +32,7 @@ public class TipoMovilidadEntity {
     }
 
     @Basic
-    @Column(name = "text_user")
+    @Column(name = "text_user", nullable = true, length = 200)
     public String getTextUser() {
         return textUser;
     }
@@ -42,7 +42,7 @@ public class TipoMovilidadEntity {
     }
 
     @Basic
-    @Column(name = "text_host")
+    @Column(name = "text_host", nullable = true, length = 200)
     public String getTextHost() {
         return textHost;
     }
@@ -52,7 +52,7 @@ public class TipoMovilidadEntity {
     }
 
     @Basic
-    @Column(name = "descripcion")
+    @Column(name = "descripcion", nullable = true, length = 200)
     public String getDescripcion() {
         return descripcion;
     }

@@ -1,7 +1,5 @@
 package domain;
 
-import com.mysql.cj.x.protobuf.MysqlxDatatypes;
-
 import javax.persistence.*;
 
 @Entity
@@ -11,9 +9,10 @@ public class MovilidadEntity {
     private Integer status;
     private String textUser;
     private String textHost;
+    private int idTipoMovilidad;
 
     @Id
-    @Column(name = "id_movilidad")
+    @Column(name = "id_movilidad", nullable = false)
     public int getIdMovilidad() {
         return idMovilidad;
     }
@@ -23,7 +22,7 @@ public class MovilidadEntity {
     }
 
     @Basic
-    @Column(name = "status")
+    @Column(name = "status", nullable = true)
     public Integer getStatus() {
         return status;
     }
@@ -33,7 +32,7 @@ public class MovilidadEntity {
     }
 
     @Basic
-    @Column(name = "text_user")
+    @Column(name = "text_user", nullable = true, length = 200)
     public String getTextUser() {
         return textUser;
     }
@@ -43,13 +42,23 @@ public class MovilidadEntity {
     }
 
     @Basic
-    @Column(name = "text_host")
+    @Column(name = "text_host", nullable = true, length = 200)
     public String getTextHost() {
         return textHost;
     }
 
     public void setTextHost(String textHost) {
         this.textHost = textHost;
+    }
+
+    @Basic
+    @Column(name = "id_tipo_movilidad", nullable = false)
+    public int getIdTipoMovilidad() {
+        return idTipoMovilidad;
+    }
+
+    public void setIdTipoMovilidad(int idTipoMovilidad) {
+        this.idTipoMovilidad = idTipoMovilidad;
     }
 
     @Override
@@ -60,6 +69,7 @@ public class MovilidadEntity {
         MovilidadEntity that = (MovilidadEntity) o;
 
         if (idMovilidad != that.idMovilidad) return false;
+        if (idTipoMovilidad != that.idTipoMovilidad) return false;
         if (status != null ? !status.equals(that.status) : that.status != null) return false;
         if (textUser != null ? !textUser.equals(that.textUser) : that.textUser != null) return false;
         if (textHost != null ? !textHost.equals(that.textHost) : that.textHost != null) return false;
@@ -73,6 +83,7 @@ public class MovilidadEntity {
         result = 31 * result + (status != null ? status.hashCode() : 0);
         result = 31 * result + (textUser != null ? textUser.hashCode() : 0);
         result = 31 * result + (textHost != null ? textHost.hashCode() : 0);
+        result = 31 * result + idTipoMovilidad;
         return result;
     }
 }

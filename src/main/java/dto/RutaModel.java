@@ -1,5 +1,7 @@
 package dto;
 
+import domain.RutaEntity;
+
 public class RutaModel {
     private int idRuta;
     private Integer status;
@@ -8,6 +10,12 @@ public class RutaModel {
     private int idOrigen;
     private int idDllegada;
 
+    public RutaModel(RutaEntity rutaEntity) {
+        this.idRuta = rutaEntity.getIdRuta();
+        this.status = rutaEntity.getStatus();
+        this.idOrigen = rutaEntity.getIdOrigen();
+        this.idDllegada = rutaEntity.getIdDllegada();
+    }
     public RutaModel(int idRuta, Integer status, int idOrigen, int idDllegada) {
         this.idRuta = idRuta;
         this.status = status;

@@ -3,9 +3,12 @@
 <hibernate-configuration>
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/dbtest_lpbus</property>
-    <property name="hibernate.connection.username">ccaverox</property>
-    <property name="hibernate.connection.password">root</property>
+    <property name="hibernate.connection.driver_class">org.mariadb.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mariadb://localhost:3306/dbtest_lpbus</property>
+      <mapping class="domain.MovilidadEntity"/>
+      <mapping class="domain.MovilidadRutaEntity"/>
+      <mapping class="domain.ParadaEntity"/>
+      <mapping class="domain.RutaEntity"/>
+      <mapping class="domain.TipoMovilidadEntity"/>
   </session-factory>
 </hibernate-configuration>

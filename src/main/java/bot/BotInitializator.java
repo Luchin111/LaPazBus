@@ -1,5 +1,7 @@
 package bot;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.TelegramBotsApi;
@@ -9,25 +11,15 @@ import javax.annotation.PostConstruct;
 
 @Component
 public class BotInitializator {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(BotInitializator.class);
+
     public BotInitializator() {
     }
+
     @PostConstruct
     public void init(){
-
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-        System.out.println("INICIALIZAR EL BOT");
-
+        LOGGER.info("Emprezo");
         ApiContextInitializer.init();
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
         try {

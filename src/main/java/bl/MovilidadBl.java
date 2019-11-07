@@ -25,7 +25,6 @@ public class MovilidadBl {
         if (optional.isPresent()) {
             return optional.get();
         } else {
-            // Otra alternativa podría ser: crear una nueva persona con valores por defecto y retornar este nuevo objeto
             throw new RuntimeException("Record cannot found for CpPerson with ID: " + pk);
         }
     }

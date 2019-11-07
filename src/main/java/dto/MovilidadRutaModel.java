@@ -1,8 +1,5 @@
 package dto;
 
-import domain.MovilidadEntity;
-import domain.RutaEntity;
-
 public class MovilidadRutaModel {
     private int idMovilidadRuta;
     private Integer statuss;
@@ -11,12 +8,11 @@ public class MovilidadRutaModel {
     private int idMovilidad;
     private int idRuta;
 
-    public MovilidadRutaModel(Integer statuss, int idMovilidad, int idRuta) {
+       public MovilidadRutaModel(Integer statuss, int idMovilidad, int idRuta) {
         this.statuss = statuss;
         this.idMovilidad = idMovilidad;
         this.idRuta = idRuta;
     }
-
     public int getIdMovilidadRuta() {
         return idMovilidadRuta;
     }

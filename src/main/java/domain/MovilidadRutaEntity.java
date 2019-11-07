@@ -9,9 +9,12 @@ public class MovilidadRutaEntity {
     private Integer status;
     private String textUser;
     private String textHost;
+    private int idMovilidad;
+    private int idRuta;
+    private MovilidadEntity movilidadByIdMovilidad;
 
     @Id
-    @Column(name = "id_movilidad_ruta")
+    @Column(name = "id_movilidad_ruta", nullable = false)
     public int getIdMovilidadRuta() {
         return idMovilidadRuta;
     }
@@ -21,7 +24,7 @@ public class MovilidadRutaEntity {
     }
 
     @Basic
-    @Column(name = "status")
+    @Column(name = "status", nullable = true)
     public Integer getStatus() {
         return status;
     }
@@ -31,7 +34,7 @@ public class MovilidadRutaEntity {
     }
 
     @Basic
-    @Column(name = "text_user")
+    @Column(name = "text_user", nullable = true, length = 200)
     public String getTextUser() {
         return textUser;
     }
@@ -41,13 +44,33 @@ public class MovilidadRutaEntity {
     }
 
     @Basic
-    @Column(name = "text_host")
+    @Column(name = "text_host", nullable = true, length = 200)
     public String getTextHost() {
         return textHost;
     }
 
     public void setTextHost(String textHost) {
         this.textHost = textHost;
+    }
+
+    @Basic
+    @Column(name = "id_movilidad", nullable = false)
+    public int getIdMovilidad() {
+        return idMovilidad;
+    }
+
+    public void setIdMovilidad(int idMovilidad) {
+        this.idMovilidad = idMovilidad;
+    }
+
+    @Basic
+    @Column(name = "id_ruta", nullable = false)
+    public int getIdRuta() {
+        return idRuta;
+    }
+
+    public void setIdRuta(int idRuta) {
+        this.idRuta = idRuta;
     }
 
     @Override
@@ -58,6 +81,8 @@ public class MovilidadRutaEntity {
         MovilidadRutaEntity that = (MovilidadRutaEntity) o;
 
         if (idMovilidadRuta != that.idMovilidadRuta) return false;
+        if (idMovilidad != that.idMovilidad) return false;
+        if (idRuta != that.idRuta) return false;
         if (status != null ? !status.equals(that.status) : that.status != null) return false;
         if (textUser != null ? !textUser.equals(that.textUser) : that.textUser != null) return false;
         if (textHost != null ? !textHost.equals(that.textHost) : that.textHost != null) return false;
@@ -71,6 +96,18 @@ public class MovilidadRutaEntity {
         result = 31 * result + (status != null ? status.hashCode() : 0);
         result = 31 * result + (textUser != null ? textUser.hashCode() : 0);
         result = 31 * result + (textHost != null ? textHost.hashCode() : 0);
+        result = 31 * result + idMovilidad;
+        result = 31 * result + idRuta;
         return result;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "id_movilidad", referencedColumnName = "id_movilidad", nullable = false)
+    public MovilidadEntity getMovilidadByIdMovilidad() {
+        return movilidadByIdMovilidad;
+    }
+
+    public void setMovilidadByIdMovilidad(MovilidadEntity movilidadByIdMovilidad) {
+        this.movilidadByIdMovilidad = movilidadByIdMovilidad;
     }
 }

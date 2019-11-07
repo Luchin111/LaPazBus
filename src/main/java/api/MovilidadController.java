@@ -1,11 +1,9 @@
 package api;
 
 
-import Repositorys.MovilidadRepository;
 import bl.CustomerBl;
 import dto.MovilidadModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

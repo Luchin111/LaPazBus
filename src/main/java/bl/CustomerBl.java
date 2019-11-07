@@ -1,6 +1,6 @@
 package bl;
 
-import Repositorys.MovilidadRepository;
+import Repositories.MovilidadRepository;
 import domain.MovilidadEntity;
 import dto.MovilidadModel;
 import dto.Status;

@@ -1,7 +1,6 @@
-package Repositorys;
+package Repositories;
 
 import domain.MovilidadEntity;
-import dto.MovilidadModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

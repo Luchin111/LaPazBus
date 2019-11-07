@@ -14,7 +14,12 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
+<<<<<<< HEAD
           <factory-entry name="Entities" value="d823078a-0aa3-45b7-af21-7c6a996ea931" />
+=======
+          <factory-entry name="com.example.LaPazRutas_LaPazRutas_jar_1.0-SNAPSHOTPU" value="d823078a-0aa3-45b7-af21-7c6a996ea931" />
+          <factory-entry name="entityManagerFactory" />
+>>>>>>> 17622cc9fa164057841729ffad29850c2fa46c9f
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />

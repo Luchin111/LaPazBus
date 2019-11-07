@@ -1,8 +1,12 @@
 package Repositorys;
 
+import domain.MovilidadEntity;
 import dto.MovilidadModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface MovilidadRepository extends JpaRepository<MovilidadModel, Integer> {
+import java.util.List;
 
+public interface MovilidadRepository extends JpaRepository<MovilidadEntity, Integer> {
+
+    List<MovilidadEntity> findAllByStatus(int status);
 }

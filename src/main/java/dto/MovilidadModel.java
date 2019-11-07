@@ -1,5 +1,7 @@
 package dto;
 
+import domain.MovilidadEntity;
+
 public class MovilidadModel {
     private int idMovilidad;
     private Integer statuss;
@@ -7,6 +9,13 @@ public class MovilidadModel {
     private String textHost;
     private int idTipoMovilidad;
 
+    public MovilidadModel(MovilidadEntity movilidadEntity) {
+        this.idMovilidad = movilidadEntity.getIdMovilidad();
+        this.statuss = movilidadEntity.getStatus();
+        this.idTipoMovilidad=movilidadEntity.getIdMovilidad(); //maaaaaaaal
+    }
+
+    public MovilidadModel(){}
 
     public MovilidadModel(int idMovilidad, Integer statuss, int idTipoMovilidad ) {
         this.idMovilidad = idMovilidad;

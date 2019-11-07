@@ -2,28 +2,30 @@ package api;
 
 
 import Repositorys.MovilidadRepository;
+import bl.CustomerBl;
 import dto.MovilidadModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-public class MovilidadController {
-    MovilidadRepository movilidadRepository;
-    @Autowired
 
-    public MovilidadController(MovilidadRepository movilidadRepository) {
-        this.movilidadRepository = movilidadRepository;
+@RestController
+@RequestMapping("/v1/movilidad")
+public class MovilidadController {
+    private CustomerBl customerBl;
+
+    @Autowired
+    public MovilidadController(CustomerBl customerBl) {
+        this.customerBl = customerBl;
     }
 
 
 
     @GetMapping("/movilidad")
     List<MovilidadModel> all(){
-        return movilidadRepository.findAll();
+        return customerBl.findAll();
     }
 
 }
-

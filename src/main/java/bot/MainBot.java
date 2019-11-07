@@ -1,6 +1,8 @@
 package bot;
 
-import com.sun.media.jfxmedia.logging.Logger;
+
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -10,6 +12,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class MainBot extends TelegramLongPollingBot {
+    private static final Logger logger = LogManager.getLogger(MainBot.class);
     SendMessage message;
     String respuesta;
     URL url;
@@ -58,16 +61,18 @@ public class MainBot extends TelegramLongPollingBot {
     private String Responder(String command, String chatName) {
 
         String resp= "Hola "+chatName +" en que puedo ayudarte? \n" +
-                "/ruta Buscar la ruta de una linea especifica \n" +
+                "/ruta Buscar la ruta de una linea especifica     \n" +
                 "/mdest Buscar minibuses a mi destino \n";
-        if(command.equals("/ruta")){
 
+        if(command.equals("/ruta")){
+            logger.info(""+chatName+" seleccionando rutas");
             resp = "Buscar la ruta de una linea especifica \n" +
                     "/T Mi teleferico \n" +
                     "/P PumaKatari \n" +
                     "/M Minibuses \n" +
                     "/B Buses \n";
             if(command.equals("/P")){
+
                 resp = "Buscar la ruta de una linea especifica \nPumakatari \n" +
                         "/1p Inca Llojeta \n" +
                         "/2p Villa Salome \n" +

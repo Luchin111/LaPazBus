@@ -23,7 +23,7 @@ public class MovilidadEntity {
     }
 
     @Basic
-    @Column(name = "status")
+    @Column(name = "statuss")
     public Integer getStatus() {
         return status;
     }

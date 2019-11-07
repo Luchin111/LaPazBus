@@ -32,7 +32,7 @@ public class MovilidadBl {
 
     public List<MovilidadModel> findAll() {
         List<MovilidadModel> movilidadModelList = new ArrayList<>();
-        for (MovilidadEntity movilidadEntity: movilidadRepository.findAllByStatus(Status.ACTIVE.getStatus())) {
+        for (MovilidadEntity movilidadEntity:movilidadRepository.findAllByStatus(Status.ACTIVE.getStatus())) {
             movilidadModelList.add(new MovilidadModel(movilidadEntity));
         }
         return movilidadModelList;

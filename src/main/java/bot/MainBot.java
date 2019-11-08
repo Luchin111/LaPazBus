@@ -59,7 +59,7 @@ public class MainBot extends TelegramLongPollingBot {
                 "/1 Buscar la ruta de una linea especifica \n" +
                 "/2 Buscar minibuses a mi destino \n";
 
-        if(command.equals("/1A")){
+        if(command.equals("/1")){
             resp = "Buscar la ruta de una linea especifica \n" +
                     "/T Mi teleferico \n" +
                     "/P PumaKatari \n" +
